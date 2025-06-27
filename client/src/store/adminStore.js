@@ -1,7 +1,7 @@
 import axios from "axios";
 import { create } from "zustand";
 
-const SERVER_URL = import.meta.env.SERVER_URL || "http://localhost:5001";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 const useAdminStore = create((set, get) => ({
   // State
