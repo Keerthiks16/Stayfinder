@@ -217,14 +217,16 @@ function App() {
             <AdminUserSelected />
           </AdminLayout>
         }
-      /><Route
+      />
+      <Route
         path="/admin/listings/:id"
         element={
           <AdminLayout>
             <AdminListingSelected />
           </AdminLayout>
         }
-      /><Route
+      />
+      <Route
         path="/admin/bookings/:id"
         element={
           <AdminLayout>

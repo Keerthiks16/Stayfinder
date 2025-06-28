@@ -15,7 +15,7 @@ export const signup = async (req, res) => {
     res.cookie("stayfinder-token", token, {
       httpOnly: true,
       secure: (process.env.NODE_ENV = "production"),
-      sameSite: "strict",
+      sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     return res.status(201).json(user);
@@ -39,7 +39,7 @@ export const login = async (req, res) => {
     res.cookie("stayfinder-token", token, {
       httpOnly: true,
       secure: (process.env.NODE_ENV = "production"),
-      sameSite: "strict",
+      sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });
     return res.status(200).json(user);
@@ -57,11 +57,13 @@ export const logout = async (req, res) => {
   }
 };
 
-export const getcurrentuser = async (req,res)=>{
+export const getcurrentuser = async (req, res) => {
   try {
-    return res.status(200).json({user:req.user});
+    return res.status(200).json({ user: req.user });
   } catch (error) {
-    console.log(`Error in GetCurrentUser: ${error}`)
-    return res.status(500).json({message: `Error in GetCurrentUser: ${error}`});
+    console.log(`Error in GetCurrentUser: ${error}`);
+    return res
+      .status(500)
+      .json({ message: `Error in GetCurrentUser: ${error}` });
   }
-}
+};
