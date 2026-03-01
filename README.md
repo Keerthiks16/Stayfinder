@@ -2,7 +2,7 @@
 
 # StayFinder 🏡
 
-**StayFinder** is a full-stack web application designed for seamless property listings, hotel/stay bookings, and robust admin management. Whether you're a **guest**, **host**, or **admin**, StayFinder provides a complete solution for managing stays and reservations.
+**StayFinder** is a full-stack web application designed for seamless property listings, hotel/stay bookings, and robust admin management. Whether you're a **guest**, **host**, or **admin**, StayFinder provides a complete solution for managing stays and reservations. 
 
 ---
 
